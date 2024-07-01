@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(images.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
+
+/* ! mga binago ko sa buhay ko */
+
+div.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+div.container > div.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+}
+div.container > div.nav-container > div.logo > img {
+  height: 80px;
+}
+div.container > div.nav-container > nav.navbar > ul > li {
+  list-style: none;
+}
+div.container > div.nav-container > nav.navbar > ul {
+  display: flex;
+  gap: 1rem;
+}
+div.container > div.nav-container > nav.navbar > ul > li > a {
+  color: yellow;
+  font-size: 1.15rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+}
+div.container > div.nav-container > nav.navbar > ul > li > a.active,
+div.container > div.nav-container > nav.navbar > ul > li > a:hover {
+  border-bottom: 3px solid yellow;
+}
+
+div.container > h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  letter-spacing: 0.5rem;
+
+  font-size: 5rem;
+  color: yellow;
+  text-shadow: 0 0 20px yellow, 0 0 40px yellow, 0 0 60px yellow,
+    0 0 80px yellow, 0 0 100px yellow;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+div.container > h1:hover {
+  text-shadow: 0 0 30px yellow, 0 0 50px yellow, 0 0 70px yellow,
+    0 0 90px yellow, 0 0 110px yellow;
+}
+
+/* ! mga binago ko sa buhay ko */
+
+@media only screen and (max-width: 650px) {
+  div.container > div.nav-container {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,53 @@
+div.gangs-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 3rem;
+}
+
+div.gangs-container > div.card {
+  display: flex;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: rgba(254, 0, 2, 1);
+  box-shadow: -10px -10px 0px wheat;
+  border: 1px solid black;
+}
+div.gangs-container > div.card > img {
+  height: 300px;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  object-position: top;
+}
+div.gangs-container > div.card > div.desc {
+  padding: 1rem;
+}
+
+div.gangs-container > div.card > div.desc {
+  padding: 1rem;
+  color: white;
+  text-align: justify;
+}
+
+div.gangs-container > div.card > div.desc > p:first-of-type {
+  color: yellow;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.2rem;
+}
+
+@media only screen and (max-width: 880px) {
+  div.gangs-container {
+    grid-template-columns: 1fr;
+  }
+  div.gangs-container > div.card {
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  div.gangs-container > div.card > img {
+    width: 100%;
+  }
+}
